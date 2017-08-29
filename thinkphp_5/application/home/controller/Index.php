@@ -1,14 +1,13 @@
 <?php
 namespace app\home\controller;
-
-class Index
+    
+use think\Controller;
+    
+class Index extends Controller
 {
     public function index()
     {
-        return '123';
+        return $this -> fetch();
     }
-    public function aaa()
-    {
-        return 'aaa';
-    }
+
 }

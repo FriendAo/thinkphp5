@@ -9,12 +9,22 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+//设定字符集
+//   head("content-type:text/html;charset=utf-8");
 // [ 应用入口文件 ]
 
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
+    
+// 给静态资源文件设置路径
+define('CSS_URL', __DIR__ .'/static/css/');
+    
+    
+    
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
+    
+   
     
 //执行一次创建build创建d需要注释掉
 //$build = include '../build.php';
