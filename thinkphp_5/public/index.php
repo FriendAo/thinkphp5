@@ -17,9 +17,14 @@
 define('APP_PATH', __DIR__ . '/../application/');
     
 // 给静态资源文件设置路径
-define('CSS_URL', __DIR__ .'/static/css/');
+//home分组:
+define('CSS_URL','/../home/public/css/');
+define('IMG_URL','/../home/public/images/');
+define('JS_URL','/../home/public/js/');
     
-    
+//admin分组
+define('ADMIN_CSS_URL', __DIR__ .'/../admin/public/css/');
+define('ADMIN_IMG_URL', __DIR__ .'/../admin/public/images/');
     
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
