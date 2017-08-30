@@ -8,4 +8,5 @@ class Manager extends Controller
     {
         return $this -> fetch();
     }
+
 }
