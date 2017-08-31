@@ -13,7 +13,13 @@ class Manager extends Controller
     public function insert()
     {
         $obj =model('abc');
-      //  $obj->save();
+
+        $t = input('post.text');
+        $d = input('post.id');
+        $data = ['text' => $t, 'id' => $d];
+        $obj -> insert($data);
+        
+        
         $info = $obj -> select();
         $this -> assign('info',$info);
         return $this -> fetch('insert');
