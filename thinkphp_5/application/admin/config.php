@@ -9,7 +9,5 @@ return [
     //配置css,js等静态文件
     '__PUBLIC__'=>'/static/admin/',
     '__HOME__'=>'/static/home/',
-
-    
     ],
 ];

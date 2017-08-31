@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Free Bootstrap Themes by 365Bootstrap dot com - Free Responsive Html5 Templates">
+            
+            <title>维修中心电气工段NAS</title>
+            
+            <!-- Bootstrap Core CSS -->
+            {css href="__HOME__/css/bootstrap.min.css"/}
+            
+            <!-- Custom CSS -->
+            {css href="__HOME__/css/reset.css"/} <!-- CSS reset -->
+            {css href="__HOME__/css/style.css"/}
+            {css href="__HOME__/css/animated-logo.min.css"><!-- Logo -->
+            
+            
+            <!-- Custom Fonts -->
+            {css href="__HOME__/font-awesome/css/font-awesome.min.css"/}
+            
+            <!-- Js -->
+            <!-- Modernizr -->
+            {js href="__HOME__/js/modernizr.js"/}
+            <!-- D-M-Y-->
+            {js href="__HOME__/js/date.js"/}
+            
+            <!--修改导航条背景
+            <style type="text/css">
+                .navbar-default {
+                    background-color:#222
+                }
+            </style>
+            -->
+            
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+             <script src="js/html5shiv.js"></script>
+             <script src="js/respond.min.js"></script>
+             value='+i+++'
+             <![endif]-->
+            </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">提交数据</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="page-scroll" href="./littlepaper.php">继续录入</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="../index.html">返回首页</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div id="page-content" class="index-page">
+            <!-- ////////////Content Box 01 -->
+            <section class="box-content box-5" id="contact">
+                <div>录入系统</div>
+                {foreach($info as $k => $v)}
+                <tr>
+                                <td>{$v.id}</td>
+                                <td>{$v.text}</td>
+                </tr>
+                {/foreach}
+            </section>
+        </div>
+        <!-- /////////////////////////////////////////Footer -->
+        
+        <!-- jQuery -->
+        {js href="__HOME__/js/jquery-2.1.1.js"}
+        {js href="__HOME__/js/masonry.pkgd.min.js"}
+        {js href="__HOME__/js/jquery.flexslider-min.js"}
+        {js href="__HOME__/js/main.js"}<!-- Resource jQuery -->
+        
+        {js href="__HOME__/js/plugins.js"}
+        {js href="__HOME__/js/main-1.js"}
+        <!-- Bootstrap Core JavaScript -->
+        {js href="__HOME__/js/bootstrap.min.js"}
+        
+        <!-- Custom Theme JavaScript -->
+        {js href="__HOME__/js/agency.js"}
+        
+        <!-- Animated Top -->
+        {js href="__HOME__/js/jquery.easing.min.js"}
+        {js href="__HOME__/js/classie.js"}
+        {js href="__HOME__/js/cbpAnimatedHeader.js"}
+        
+        
+        
+    </body>
+</html>
