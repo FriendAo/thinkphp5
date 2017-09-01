@@ -1,6 +1,7 @@
 <?php
 namespace app\admin\controller;
 use think\Controller;
+use app\admin\Model;
     
 class Index extends Controller
 {
@@ -28,12 +29,26 @@ class Index extends Controller
     //商品展示
     public function show()
     {
-        return $this -> fetch();
+        $info = model('abc') ->order('id desc')->select();
+        $this -> assign('info',$info);
+        return $this -> fetch('show');
     }
     //添加商品
     public function add()
     {
-        return $this -> fetch();
+        $obj = model('abc');
+        if(!empty($_POST['text'])){
+            $z = $obj->insert($_POST);
+            if($z){
+                $this ->success('成功','show');
+               // $this ->redirect('show','',2,'成功');
+            }else{
+                $this ->error('失败');
+               // $this ->redirect('add','',2,'失败');
+            }
+        }else{
+            return $this -> fetch();
+        }
     }
     //修改商品
     public function update()
