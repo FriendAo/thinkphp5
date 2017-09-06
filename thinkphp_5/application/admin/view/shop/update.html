@@ -34,7 +34,11 @@
                         <textarea name="text" >{$info.text}</textarea>
                     </td>
                 </tr>
-                
+                <tr>
+                    <td>商品图片</td>
+                    <td><img src="/uploads/{$info.iterm}" height="60" width="60"></td>
+                    <td><input type="file" name="iterm"/></td>
+                </tr>
                 <tr>
                     <td colspan="2" align="center">
                         <input type="submit" value="修改">

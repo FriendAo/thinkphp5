@@ -20,7 +20,8 @@
                         <li class="user_top_c"></li>
                         <li class="user_top_r"></li></ul>
                 </dd><dd id="user_main">
-                    <form action="{:url('admin/index/index')}" method="post">
+<!--                    <form action="{:url('admin/index/index')}" method="post">-->
+                    <form action="{:url('admin/Manager/login')}" method="post">
                         <ul>
                             <li class="user_main_l"></li>
                             <li class="user_main_c">
@@ -32,14 +33,15 @@
                                     <ul>
                                         <li class="user_main_text">密&nbsp;&nbsp;&nbsp;&nbsp;码： </li>
                                         <li class="user_main_input">
-                                            <input class="TxtPasswordCssClass" id="admin_psd" name="admin_psd" type="password">
+                                            <input class="TxtPasswordCssClass" id="admin_psd" name="admin_pwd" type="password">
                                         </li>
                                     </ul>
                                     <ul>
                                         <li class="user_main_text">验证码： </li>
                                         <li class="user_main_input">
                                             <input class="TxtValidateCodeCssClass" id="captcha" name="captcha" type="text">
-                                            <img src="__PUBLIC__/img/admin.png"  alt="" />
+<!--                                            <img src="__PUBLIC__/img/admin.png"  alt="" />-->
+                                                <img src="__CONTROLLER__manager/verifyImg"  alt="" onclick="this.src='__CONTROLLER__manager/verifyImg/'+Math.random()"/>
                                         </li>
                                     </ul>
                                 </div>

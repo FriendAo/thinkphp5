@@ -51,8 +51,8 @@
                         <td><a href="#">{$v.text}</a></td>
                         <td>{$v.num}</td>
                         <td>3888</td>
-                        <td><img src="__PUBLIC__img/20121018-174034-58977.jpg" height="60" width="60"></td>
-                        <td><img src="__PUBLIC__img/20121018-174034-97960.jpg" height="40" width="40"></td>
+                        <td><img src="/uploads/{$v.iterm}" height="60" width="60"></td>
+                        <td><img src="/{$v.small_iterm}" height="40" width="40"></td>
                         <td>苹果apple</td>
                         <td>2012-10-18 17:40:34</td>
                         <td><a href="__CONTROLLER__shop/update/id/{$v.id}">修改</a></td>
@@ -62,7 +62,7 @@
                     {/foreach}
                     <tr>
                         <td colspan="20" style="text-align: center;">
-                            [1]
+                            {$pagelist}
                         </td>
                     </tr>
                 </tbody>
