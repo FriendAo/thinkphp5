@@ -16,7 +16,7 @@ class Manager extends Controller
             //验证码的校验
             //if($_POST['captcha'] == $_SESSION['verify_code'])
             $vry = new captcha();
-            if($vry -> check($_POST['captcha'])){
+            if(!$vry -> check($_POST['captcha'])){
                 //验证用户名$_POST[admin_user]和密码$_POST[admin_pwd]
                 $manager = model('Manager');
                 $info = $manager -> checkNamePwd($_POST['admin_user'],$_POST['admin_pwd']);

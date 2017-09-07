@@ -30,9 +30,18 @@ class Index extends Controller
         $role_info = model('Role') -> find($role_id);
         $auth_ids = $role_info['role_auth_ids'];//权限的ids信息
         //3.全部权限信息
-        $auth_info  = model('Auth') -> select($auth_ids);
+        //超级管理员admin显示全部权限
+        if($admin_name == 'admin'){
+            $auth_infoA  = model('Auth') -> where("auth_level=0") -> select();//顶级权限
+            $auth_infoB  = model('Auth') -> where("auth_level=1") -> select();//次顶级权限
+        }else{
+            $auth_infoA  = model('Auth') -> where("auth_level=0 and auth_id in ($auth_ids)") -> select();//顶级权限
+            $auth_infoB  = model('Auth') -> where("auth_level=1 and auth_id in ($auth_ids)") -> select();//次顶级权限
+        }
+
 //        dump($auth_info);
-        $this -> assign('auth_info', $auth_info);
+        $this -> assign('auth_infoA', $auth_infoA);
+        $this -> assign('auth_infoB', $auth_infoB);
         return $this -> fetch();
     }
     //右侧
