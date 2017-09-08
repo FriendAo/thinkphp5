@@ -1,7 +1,6 @@
 <?php
 namespace app\admin\controller;
 use think\Controller;
-use app\admin\Model;
 //use app\admin\validate;
 //use think\captcha\captcha;
 
