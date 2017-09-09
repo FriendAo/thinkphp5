@@ -28,8 +28,8 @@
                     <tr>
                         <td>权限上级</td>
                         <td>
-                            <select>
-                                <option value-"0">--请选择--</option>
+                            <select name="auth_pid">
+                                <option value="0">--请选择--</option>
                                 {foreach $auth_infoA as $k => $v}
                                 <option value='{$v.auth_id}'>{$v.auth_name}</option>
                                 {/foreach}

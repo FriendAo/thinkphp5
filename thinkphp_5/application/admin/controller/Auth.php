@@ -22,6 +22,12 @@
             //两个逻辑:展示和手机
             if(!empty($_POST)){
                 
+                $z = $auth->saveData($_POST);
+                if($z){
+                    $this -> redirect('showlist');
+                }else{
+                    $this -> redirect('add');
+                }
             }else{
                 //获得被选取的上级权限
                 $auth_infoA = $auth-> where('auth_level=0')-> select();
